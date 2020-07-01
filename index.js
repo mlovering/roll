@@ -10,7 +10,10 @@ client.once('ready', () => {
 client.on('message', message => {
   //console.log(message.content);
   if(message.content.startsWith(`${prefix}roll`)) {
-    let member = message.member.user.username;
+    //let member = message.member.user.username;
+    let guild = client.guilds.cache.get('703794388735623239');
+    let name = guild.member(message.author);
+    let member = name ? name.displayName : null;
     let userInput = message.content.substring(6);
     let range = parseInt(userInput);
 
