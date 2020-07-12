@@ -18,11 +18,11 @@ client.on('message', message => {
     let range = parseInt(userInput);
 
     if(!isNaN(range)) {
-      let roll = Math.floor(Math.random() * Math.floor(range - 1)) + 1;
+      let roll = Math.floor(Math.random() * Math.floor(range)) + 1;
       message.channel.send(member + " rolls " + roll + " out of " + range);
-      // if(roll == 1) {
-      //   message.channel.send(member + " loses!");
-      // }
+      if(roll == 1) {
+        message.channel.send(member + " loses!");
+      }
     } else {
       message.channel.send("please enter a number");
     }
