@@ -8,12 +8,14 @@ client.once('ready', () => {
 })
 
 client.on('message', message => {
-  //console.log(message.content);
+  // console.log(message.content);
   if(message.content.startsWith(`${prefix}roll`)) {
-    //let member = message.member.user.username;
-    let guild = client.guilds.cache.get('703794388735623239');
-    let name = guild.member(message.author);
-    let member = name ? name.displayName : null;
+    let guild = client.guilds.cache.get('757739877398872124');
+    let member = message.member.user.username;
+    if (guild) {
+      let name = guild.member(message.author);
+      member = name ? name.displayName : null;
+    }
     let userInput = message.content.substring(6);
     let range = parseInt(userInput);
 
@@ -29,5 +31,5 @@ client.on('message', message => {
   }
 })
 
-// client.login(token);
-client.login(process.env.BOT_TOKEN);
+client.login(token);
+// client.login(process.env.BOT_TOKEN);
