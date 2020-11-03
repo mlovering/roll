@@ -1,6 +1,7 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 var GphApiClient = require('giphy-js-sdk-core');
-const { prefix, token, giphyId, guildId } = require('./config.json');
+const { prefix, giphyId, guildId } = require('./config.json');
 const client = new Discord.Client();
 let giphy = GphApiClient(giphyId);
 let guild = client.guilds.cache.get(guildId);
@@ -123,4 +124,4 @@ client.on('message', message => {
 
 })
 
-client.login(token);
+client.login();
