@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "discord.js": "^12.2.0",
+    "giphy-js-sdk-core": "*"
   },
   "devDependencies": {},
   "engines": {
