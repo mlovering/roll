@@ -3,7 +3,7 @@ var GphApiClient = require('giphy-js-sdk-core');
 const { prefix, token, giphyId, guildId } = require('./config.json');
 const client = new Discord.Client();
 let giphy = GphApiClient(giphyId);
-let guild = client.guilds.cache.get(guildId);
+let guild = client.guilds.cache.get("757739877398872124");
 const attachment = new Discord
                       .MessageAttachment('./deathroll.png', 'deathroll.png');
 
